@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	font-family: 'Montserrat', sans-serif;
 }
 ol, ul {
 	list-style: none;
@@ -52,8 +52,171 @@ table {
 * {
     box-sizing: border-box;
 }
+@primary-color:#6B6E70;
+@secondary-color:white;
 
-html, body {
-    height: 100%;
+.shadow-right {
+webkit-box-shadow: 6px 0px 6px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: 6px 0px 6px -5px rgba(0,0,0,0.75);
+box-shadow: 6px 0px 6px -5px rgba(0,0,0,0.75);
 }
+
+html{
+	height: 100%;
+}
+.resume {
+	display: flex;
+	min-height: 100vh;
+	color: @primary-color;
+}
+
+  .resume-body {
+	display: flex;
+	flex: 1;
+	@media screen and (max-width: 798px) {
+			flex-direction: column;
+			flex: 1;
+		}
+  }
+  .resume-content {
+	flex: 1;
+	padding: 2em;
+	line-height: 1;
+	background-color:#474B4F;
+	color: @secondary-color;
+
+				.picture {
+				display: flex;
+				position: relative;
+				width: 200px;
+				height: 200px;
+				overflow: hidden;
+				border-radius: 50%;
+				background-color:black;
+				.shadow-right();
+				margin: 0 auto;
+
+				img {
+					width: auto;
+					height: 100%;
+				}
+			}
+			.title {
+				text-align:center;
+				padding:1em;
+
+				h1 {
+					font-size:3em;
+					}
+			}
+			.info {
+			font-size:1.2em;
+			}
+  }
+  .resume-ads {
+	/* 12em is the width of the columns */
+	flex: 0 0 12em;
+	}
+	.mid-wrap {
+		display:flex;
+		flex-direction: row;
+		flex-wrap:wrap;
+	}
+	.job-card-wrapper {
+		margin-right: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+    background-color: #6B6E70;
+    flex-wrap: wrap;
+		margin-top: 10px;
+		@media screen and (max-width:1024px) {
+			width:48%;
+		}
+		@media screen and (max-width:798px) {
+			width:48%;
+		}
+		@media screen and (max-width: 500px) {
+			width:100%;}
+		
+
+		.job-title {
+			margin-top:10px;
+			font-size:1.4em;
+			flex:1;
+		}
+
+		.job-image {
+			display: flex;
+				position: relative;
+				width: 200px;
+				height: 200px;
+				overflow: hidden;
+				border-radius: 50%;
+				background-color:black;
+				.shadow-right();
+				margin: 0 auto;
+			
+				img {
+					width: auto;
+					height: 100%;
+				}
+			}
+		
+		.job-info {
+			font-size:1em;
+		}
+		.job-more {
+			font-size:.8em;
+
+		}
+
+
+	}
+  
+  .resume-nav {
+	/* put the nav on the left */
+	flex: 0 0 20em;
+	.shadow-right();
+	order: -1;
+	background-color:#222629;
+
+		ul {
+			padding: 20px;
+			flex-direction: column;
+			justify-content: right;
+			font-size:1.4em;
+			font-weight: bold;
+		}
+		li {
+			padding:20px;
+		}
+		a {
+			color:@primary-color;
+			text-decoration: none;
+		}
+		a:hover {
+			
+			padding:1em;
+		}
+	}
+	.text-divider {
+		font-size:2em;
+		border-bottom:2px inset black;
+		padding:20px 0px 20px 0px;
+	}
+
+				.resume-content {
+					flex: 1;
+				}
+			.resume-nav {
+				flex:0 0 10px;
+				order:0;
+				width:100%;
+				
+				li {
+					padding:10px;
+				}
+			}
 
